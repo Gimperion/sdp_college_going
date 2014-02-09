@@ -19,7 +19,6 @@ std_demo <- read.csv("./output/Student_School_Year.csv")
 ## This is a good way to prototype a working code chunk first
 ## Then vectorize it using apply or ddply elsewhere.
 for(i in unique(std_demo$sid)){
-	
 	.tmp <- subset(std_demo, sid == i)
 	
 	.tmp <- .tmp[order(.tmp$school_year, .tmp$grade_level),]

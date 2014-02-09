@@ -4,6 +4,9 @@ import pandas as pd
 import os
 import numpy as np
 
-os.chdir('/home/gimperion/box/sdp_cg_toolkit')
-std_class = pd.read_csv("./raw/Student_Classifications_Raw.csv", na_values=['', 'NULL'])
+## get current dir -- os.getcwd()
+os.chdir('/Users/Gimperion/Documents/My Box Files/sdp_cg_toolkit/')
+std_class = pd.read_csv("./output/Student_School_Year.csv", na_values=['', 'NULL'])
 
+def GetFirst9th(x):
+    
