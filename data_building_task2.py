@@ -21,3 +21,4 @@ max_group = std_class[['sid', 'school_year', 'grade_level', 'frl_num', 'iep', 'e
 sum_group = std_class[['sid', 'school_year', 'total_days_enrolled', 'total_days_absent', 'days_suspended_out_of_school']].groupby(['sid', 'school_year']).sum()
 
 std_class_final = pd.merge(max_group, sum_group, left_index=True, right_index=True, how='outer')
+
