@@ -57,7 +57,6 @@ std_enr <- subset(std_enr, enrollment_date <= school_end)  ## I modified this to
 
 std_enr$enrollment_date[std_enr$enrollment_date < std_enr$school_start & !is.na(std_enr$enrollment_date)] <- std_enr$school_start[std_enr$enrollment_date < std_enr$school_start& !is.na(std_enr$enrollment_date)]
 
-
 ## Start Collapsing ##
 enr_collapsed <- ddply(std_enr, .(sid, school_year, school_code), RetOneLine)
 ## This takes awhile to run

@@ -17,6 +17,6 @@ def GetFirst9th(x):
         return x.school_year.values[0] - (x.grade_level.values[0] - 9)
 
 std_9th_year = std_demo.groupby("sid").apply(GetFirst9th)
-
+std_demo['std_9th_year'] = std_demo.sid.map(std_9th_year)
 
 
